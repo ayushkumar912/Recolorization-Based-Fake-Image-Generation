@@ -88,7 +88,8 @@ for img_name in os.listdir(real_dir):
     data.append([real_path, fake_path, score])
     print(f"Processed: {img_name} | SSIM: {score:.4f}")
 
-# Save CSV with image paths and SSIM scores
+
+
 df = pd.DataFrame(data, columns=["Real Image", "Fake Image", "SSIM Score"])
 df.to_csv("image_pairs.csv", index=False)
 print("Dataset generation completed. CSV saved.")
